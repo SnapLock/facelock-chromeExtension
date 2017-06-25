@@ -5,19 +5,21 @@
     "description": "We make faces smile",
     "version": "1.0",
     "permissions": [
-    "activeTab",
-    "tabs"
-  ],
+        "activeTab",
+        "tabs"
+    ],
     "content_scripts": [{
-        "matches": ["http://www.google.com/*"],
-        "js": ["js/check_form.js"],
+        "matches": ["https://www.chegg.com/*", "https://www.yelp.com/*", "https://www.facebook.com/*"],
+        "js": ["js/jquery-3.1.1.min.js", "js/check_form.js"],
         "run_at": "document_end"
-  }],
+    }],
     "background": {
         "scripts": ["js/jquery-3.1.1.min.js", "js/background.js"],
         "persistent": false
     },
     "browser_action": {
-        "default_title": "Enter Info"
+        "default_title": "Face Lock",
+        "default_icon": "images/faceLockIcon.png",
+        "default_popup": "popup.html"
     }
 }

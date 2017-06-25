@@ -1,0 +1,2 @@
+Icons are only in PNG format
+    Must be in three different sized scales 16, 19, 48, 76, and 128
